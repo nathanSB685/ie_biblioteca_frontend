@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const paginaAtual = window.location.pathname;
 
   if (
-    paginaAtual.includes("home.html") ||
+    paginaAtual.includes("index.html") ||
     paginaAtual === "/" ||
     paginaAtual === ""
   )
@@ -31,7 +31,7 @@ function atualizarMenu() {
   if (token) {
     // Usuário LOGADO
     navButtons.innerHTML = `
-            <button onclick="window.location.href='home.html'">Área do Estudante</button>
+            <button onclick="window.location.href='index.html'">Área do Estudante</button>
             <button onclick="window.location.href='meus-emprestimos.html'">Meu Histórico</button>
             <button onclick="window.location.href='painel-biblio.html'">Área do Funcionário</button>
             <button onclick="fazerLogout()" style="background-color: #e74c3c; margin-left: 20px;">Sair</button>
@@ -63,7 +63,7 @@ function protegerPaginas() {
   const token = localStorage.getItem("token_biblioteca");
   const paginaAtual = window.location.pathname;
   const paginasProtegidas = [
-    "home.html",
+    "index.html",
     "cadastrar-livro.html",
     "meus-emprestimos.html",
     "painel-biblio.html",
@@ -95,7 +95,7 @@ async function logarUsuario() {
 
     if (dados.token) {
       localStorage.setItem("token_biblioteca", dados.token);
-      window.location.href = "home.html"; // Vai para a tela inicial
+      window.location.href = "index.html"; // Vai para a tela inicial
     } else {
       alert(
         "Erro: " + (dados.erro || "Falha no login. Verifique suas credenciais.")
@@ -346,7 +346,7 @@ async function salvarLivro() {
 
     if (resposta.ok) {
       alert("Livro cadastrado com sucesso!");
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     } else {
       alert("Erro: " + (resultado.erro || "Falha ao cadastrar"));
     }
