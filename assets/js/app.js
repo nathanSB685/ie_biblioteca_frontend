@@ -470,7 +470,7 @@ async function carregarTodosEmprestimos() {
       const corStatus = estaAtivo ? "#e67e22" : "#27ae60";
 
       const botaoAcao = estaAtivo
-        ? `<button class="btn-verde" style="padding: 5px 10px; font-size: 0.9rem;" onclick="registrarDevolucaoLivro(${emp.emprestimo_id})">Confirmar Devolução</button>`
+        ? `<button class="btn-verde" style="padding: 5px 10px; font-size: 0.9rem;" onclick="confirmarDevolucao(${emp.emprestimo_id})">Confirmar Devolução</button>`
         : `<button class="btn-cinza" style="padding: 5px 10px; font-size: 0.9rem;" disabled>Já Devolvido</button>`;
 
       tabela.innerHTML += `
