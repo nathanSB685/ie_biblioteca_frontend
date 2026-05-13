@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema Estudantil</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Sistema Estudantil</h1>
+      <div class="nav-buttons">
+        <button onclick="window.location.href='home.html'">
+          Área do Estudante
+        </button>
+        <button onclick="window.location.href='painel-biblio.html'">
+          Área do Funcionário
+        </button>
+        <button onclick="fazerLogout()">Sair</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Meus Empréstimos</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 20px">
+        <tr style="background-color: #f0f3f4; text-align: left">
+          <th style="padding: 12px; border-bottom: 2px solid #ddd">Livro</th>
+          <th style="padding: 12px; border-bottom: 2px solid #ddd">
+            Data de Empréstimo
+          </th>
+          <th style="padding: 12px; border-bottom: 2px solid #ddd">
+            Devolução Prevista
+          </th>
+          <th style="padding: 12px; border-bottom: 2px solid #ddd">Status</th>
+        </tr>
+        <tbody id="tabela-historico"></tbody>
+      </table>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+    <div class="chatbot-widget">
+      <div class="chatbot-header">Eu sou a Lia!</div>
+      <div class="chatbot-body">
+        <p>Olá! Posso te ajudar a encontrar um livro.</p>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" placeholder="Pergunte algo!" />
+      </div>
+    </div>
+  </body>
+</html>

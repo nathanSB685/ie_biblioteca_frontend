@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema Estudantil</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Sistema Estudantil</h1>
+      <div class="nav-buttons">
+        <button onclick="window.location.href='home.html'">
+          Área do Estudante
+        </button>
+        <button onclick="window.location.href='painel-biblio.html'">
+          Área do Funcionário
+        </button>
+        <button onclick="fazerLogout()">Sair</button>
+      </div>
+    </nav>
+
+    <div
+      class="container"
+      style="
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h2>Controle de Empréstimos (Bibliotecária)</h2>
+
+      <div style="margin-bottom: 20px; display: flex; gap: 10px">
+        <input
+          type="text"
+          id="buscaAluno"
+          onkeyup="buscarAlunoEmprestimo()"
+          placeholder="🔍 Digite o nome do aluno para buscar..."
+          style="
+            flex: 1;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+          "
+        />
+      </div>
+
+      <table style="width: 100%; border-collapse: collapse; text-align: left">
+        <thead>
+          <tr style="background-color: #2b3945; color: white">
+            <th style="padding: 12px; border-radius: 6px 0 0 0">Aluno</th>
+            <th style="padding: 12px">Livro</th>
+            <th style="padding: 12px">Previsão de Devolução</th>
+            <th style="padding: 12px">Status</th>
+            <th
+              style="
+                padding: 12px;
+                border-radius: 0 6px 0 0;
+                text-align: center;
+              "
+            >
+              Ação
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tabela-todos-emprestimos">
+          <!-- O JavaScript vai injetar as linhas dos alunos aqui -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+    <div class="chatbot-widget">
+      <div class="chatbot-header">Eu sou a Lia!</div>
+      <div class="chatbot-body">
+        <p>Olá! Posso te ajudar a encontrar um livro.</p>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" placeholder="Pergunte algo!" />
+      </div>
+    </div>
+  </body>
+</html>

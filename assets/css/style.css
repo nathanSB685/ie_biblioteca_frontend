@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Barra de Navegação */
+.navbar {
+  background-color: #2b3945;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.nav-buttons button {
+  background-color: #3b4b5a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.nav-buttons button:hover {
+  background-color: #4b5b6a;
+}
+
+/* Contêiner Central */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.container h2 {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+/* Formulários e Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1abc9c;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botões de Ação */
+.btn-verde {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-verde:hover {
+  background-color: #219653;
+}
+
+.btn-cinza {
+  background-color: #f0f3f4;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Grid de Gêneros*/
+.grid-generos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card-genero {
+  flex: 1 1 200px;
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card-genero:hover {
+  background-color: #1ca78b;
+}
+
+/* Widget da Lia (Canto inferior direito) */
+.chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background-color: #1abc9c;
+  color: white;
+  padding: 12px 15px;
+  font-weight: bold;
+}
+
+.chatbot-body {
+  padding: 15px;
+  font-size: 0.9rem;
+  min-height: 80px;
+}
+
+.chatbot-input {
+  border-top: 1px solid #eee;
+  padding: 10px;
+}
+
+.chatbot-input input {
+  margin: 0;
+  border: none;
+  padding: 5px;
+  font-size: 0.9rem;
+}

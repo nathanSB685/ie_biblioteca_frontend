@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro - Sistema Estudantil</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Sistema Estudantil</h1>
+      <div class="nav-buttons">
+        <button
+          onclick="window.location.href='login.html'"
+          style="background-color: #1abc9c"
+        >
+          Fazer Login
+        </button>
+      </div>
+    </nav>
+
+    <div class="container" style="max-width: 400px">
+      <h2>Criar Nova Conta</h2>
+      <form
+        id="form-cadastro"
+        onsubmit="event.preventDefault(); cadastrarUsuario();"
+      >
+        <input
+          type="text"
+          id="novo-nome"
+          placeholder="Nome Completo"
+          required
+        />
+        <input
+          type="email"
+          id="novo-email"
+          placeholder="E-mail institucional"
+          required
+        />
+        <input
+          type="password"
+          id="nova-senha"
+          placeholder="Crie uma Senha"
+          required
+        />
+
+        <button type="submit" class="btn-verde">Cadastrar</button>
+      </form>
+
+      <div style="text-align: center; margin-top: 20px">
+        <p>
+          Já possui conta?
+          <a
+            href="login.html"
+            style="color: #1abc9c; text-decoration: none; font-weight: bold"
+            >Entrar</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

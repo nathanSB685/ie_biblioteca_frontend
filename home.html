@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema Estudantil</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Sistema Estudantil</h1>
+      <div class="nav-buttons">
+        <button onclick="window.location.href='home.html'">
+          Área do Estudante
+        </button>
+        <button onclick="window.location.href='painel-biblio.html'">
+          Área do Funcionário
+        </button>
+        <button onclick="fazerLogout()">Sair</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Selecione um gênero para começar sua jornada.</h2>
+      <div class="grid-generos">
+        <div class="grid-generos">
+          <div class="card-genero" onclick="filtrarPorGenero('Clássicos')">
+            Clássicos
+          </div>
+          <div
+            class="card-genero"
+            onclick="filtrarPorGenero('Poesia e Crônica')"
+          >
+            Poesia e Crônica
+          </div>
+          <div
+            class="card-genero"
+            onclick="filtrarPorGenero('Ficção Científica e Fantasia')"
+          >
+            Ficção Científica e Fantasia
+          </div>
+          <div
+            class="card-genero"
+            onclick="filtrarPorGenero('Ciências Exatas e Biológicas')"
+          >
+            Ciências Exatas e Biológicas
+          </div>
+          <div
+            class="card-genero"
+            onclick="filtrarPorGenero('Ciências Humanas')"
+          >
+            Ciências Humanas
+          </div>
+          <div class="card-genero" onclick="filtrarPorGenero('HQs e Mangás')">
+            HQs e Mangás
+          </div>
+          <div
+            class="card-genero"
+            onclick="filtrarPorGenero('Todos')"
+            style="background-color: #2b3945; color: white"
+          >
+            Listar Todos
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 40px">Consulta de Acervo</h2>
+      <div class="input-group">
+        <input
+          type="text"
+          id="buscaLivro"
+          placeholder="Busque por título ou autor..."
+        />
+        <button class="btn-cinza" onclick="buscarLivro()">Buscar</button>
+      </div>
+
+      <div id="resultado-livros" style="margin-top: 20px"></div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+    <div class="chatbot-widget">
+      <div class="chatbot-header">Eu sou a Lia!</div>
+      <div class="chatbot-body">
+        <p>Olá! Posso te ajudar a encontrar um livro.</p>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" placeholder="Pergunte algo!" />
+      </div>
+    </div>
+  </body>
+</html>

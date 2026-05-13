@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema Estudantil</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Sistema Estudantil</h1>
+      <div class="nav-buttons">
+        <button onclick="window.location.href='home.html'">
+          Área do Estudante
+        </button>
+        <button onclick="window.location.href='painel-biblio.html'">
+          Área do Funcionário
+        </button>
+        <button onclick="fazerLogout()">Sair</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Cadastrar Novo Livro</h2>
+      <form
+        id="form-cadastro-livro"
+        onsubmit="event.preventDefault(); salvarLivro();"
+      >
+        <div
+          style="
+            margin-bottom: 20px;
+            background: #e8f8f5;
+            padding: 15px;
+            border-radius: 5px;
+          "
+        >
+          <label
+            ><strong>Preenchimento Automático com IA (Opcional):</strong></label
+          >
+          <div class="input-group" style="margin-top: 10px">
+            <input type="file" id="inputFoto" accept="image/*" />
+            <button type="button" class="btn-cinza" onclick="lerCapaComIA()">
+              Ler Capa
+            </button>
+          </div>
+        </div>
+
+        <input type="text" id="titulo" placeholder="Título da Obra" required />
+        <input type="text" id="autor" placeholder="Autor" required />
+        <input type="text" id="editora" placeholder="Editora" required />
+        <input
+          type="text"
+          id="genero"
+          placeholder="Gênero Literário"
+          required
+        />
+        <input
+          type="number"
+          id="quantidade"
+          placeholder="Quantidade em Estoque"
+          required
+        />
+
+        <button type="submit" class="btn-verde">Salvar no Sistema</button>
+      </form>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+    <div class="chatbot-widget">
+      <div class="chatbot-header">Eu sou a Lia!</div>
+      <div class="chatbot-body">
+        <p>Olá! Posso te ajudar a encontrar um livro.</p>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" placeholder="Pergunte algo!" />
+      </div>
+    </div>
+  </body>
+</html>
