@@ -7,18 +7,17 @@
   </head>
   <body>
     <nav class="navbar">
-      <h1>Sistema Estudantil</h1>
+      <div class="logo">
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="Condex IA"></img>
+        </a>
+      </div>
       <div class="nav-buttons">
-        <button onclick="window.location.href='home.html'">
-          Área do Estudante
-        </button>
-        <button onclick="window.location.href='painel-biblio.html'">
-          Área do Funcionário
-        </button>
+        <button onclick="window.location.href='home.html'">Área do Estudante</button>
+        <button onclick="window.location.href='painel-biblio.html'">Área do Funcionário</button>
         <button onclick="fazerLogout()">Sair</button>
       </div>
     </nav>
-
     <div class="container">
       <h2>Acesse sua conta</h2>
       <form id="form-login" onsubmit="event.preventDefault(); logarUsuario();">
@@ -43,7 +42,7 @@
         </p>
       </div>
     </div>
-
+    <script src="components/footer.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>

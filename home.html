@@ -7,18 +7,17 @@
   </head>
   <body>
     <nav class="navbar">
-      <h1>Sistema Estudantil</h1>
+      <div class="logo">
+        <a href="index.html">
+         <img src="assets/images/logo.png" alt="Condex IA"></img>
+        </a>
+      </div>
       <div class="nav-buttons">
-        <button onclick="window.location.href='home.html'">
-          Área do Estudante
-        </button>
-        <button onclick="window.location.href='painel-biblio.html'">
-          Área do Funcionário
-        </button>
+        <button onclick="window.location.href='home.html'">Área do Estudante</button>
+        <button onclick="window.location.href='painel-biblio.html'">Área do Funcionário</button>
         <button onclick="fazerLogout()">Sair</button>
       </div>
     </nav>
-
     <div class="container">
       <h2>Selecione um gênero para começar sua jornada.</h2>
       <div class="grid-generos">
@@ -75,7 +74,7 @@
 
       <div id="resultado-livros" style="margin-top: 20px"></div>
     </div>
-
+    <script src="components/footer.js"></script>
     <script src="assets/js/app.js"></script>
 
     <div class="chatbot-widget">

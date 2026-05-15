@@ -9,6 +9,18 @@ body {
   background-color: #f4f6f9;
   color: #333;
 }
+.logo img {
+    max-height: 50px; /* Ajuste a altura que desejar */
+    width: auto;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
 
 /* Barra de Navegação */
 .navbar {
